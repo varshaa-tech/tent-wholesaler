@@ -1,0 +1,236 @@
+.invoice-view-page { }
+
+.invoice-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+/* ── INVOICE PAPER ── */
+.invoice-paper {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background: #fff;
+}
+
+/* Header */
+.inv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.inv-company {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.inv-logo { flex-shrink: 0; }
+
+.inv-company-name {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.inv-company-addr, .inv-company-contact {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.inv-company-gst {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 4px;
+  font-family: 'Courier New', monospace;
+}
+
+.inv-title-block { text-align: right; flex-shrink: 0; }
+
+.inv-title {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--primary);
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.inv-no-display {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--accent-dark);
+  margin: 6px 0 10px;
+  font-family: 'Courier New', monospace;
+}
+
+.inv-meta-table { font-size: 12.5px; margin-left: auto; }
+.inv-meta-table td { padding: 3px 0; }
+.inv-meta-table td:first-child { color: var(--text-muted); padding-right: 16px; }
+.inv-meta-table td:last-child  { font-weight: 600; text-align: right; }
+
+.due-date { color: var(--danger); }
+
+.inv-divider {
+  height: 2px;
+  background: var(--primary);
+  border-radius: 2px;
+  margin-bottom: 1.5rem;
+}
+
+/* Bill To / Ship To */
+.inv-parties {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.inv-section-label {
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--text-hint);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.inv-party-name    { font-size: 15px; font-weight: 700; color: var(--text-main); margin-bottom: 4px; }
+.inv-party-addr    { font-size: 12.5px; color: var(--text-muted); line-height: 1.5; }
+.inv-party-gst     { font-size: 12px; font-family: 'Courier New', monospace; color: var(--text-hint); margin-top: 4px; }
+.inv-party-contact { font-size: 12px; color: var(--text-muted); }
+
+/* Items Table */
+.inv-items-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 13px;
+}
+
+.inv-items-table thead tr {
+  background: var(--primary);
+  color: #fff;
+}
+
+.inv-items-table th {
+  padding: 9px 10px;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.3px;
+  text-align: left;
+}
+
+.inv-items-table th:first-child { border-radius: 6px 0 0 6px; }
+.inv-items-table th:last-child  { border-radius: 0 6px 6px 0; text-align: right; }
+
+.row-even { background: #fff; }
+.row-odd  { background: #f7f9fc; }
+.inv-items-table tbody tr { border-bottom: 1px solid var(--border-light); }
+
+.th-sl, .td-sl   { width: 30px; }
+.th-sku, .td-sku { font-family: 'Courier New', monospace; font-size: 11px; color: var(--text-muted); }
+.th-hsn, .td-hsn { font-size: 11px; color: var(--text-hint); }
+.th-qty, .td-qty { width: 70px; text-align: center; }
+.th-rate, .td-rate { width: 100px; text-align: right; }
+.th-disc, .td-disc { width: 60px; text-align: center; color: var(--success); }
+.th-amt, .td-amt   { width: 120px; text-align: right; font-weight: 600; }
+
+.inv-items-table td { padding: 9px 10px; vertical-align: middle; }
+
+/* Footer Grid */
+.inv-footer-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1.25rem;
+}
+
+.inv-amount-words {
+  font-style: italic;
+  font-size: 13px;
+  color: var(--text-main);
+  font-weight: 600;
+  background: var(--primary-light);
+  padding: 8px 12px;
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--primary);
+  margin-top: 4px;
+}
+
+.inv-notes p { font-size: 12.5px; color: var(--text-muted); line-height: 1.6; }
+
+.bank-table { font-size: 12px; margin-top: 6px; }
+.bank-table td { padding: 2px 12px 2px 0; }
+.bank-table td:first-child { color: var(--text-muted); font-weight: 500; }
+.bank-table td:last-child  { font-family: 'Courier New', monospace; font-weight: 600; color: var(--text-main); }
+
+/* Totals */
+.inv-totals {
+  min-width: 260px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  align-self: flex-start;
+}
+
+.inv-total-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 14px;
+  font-size: 13.5px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.inv-total-row span:first-child { color: var(--text-muted); }
+.inv-total-row span:last-child  { font-weight: 600; }
+
+.inv-total-grand {
+  background: var(--primary);
+  border-bottom: none;
+}
+.inv-total-grand span:first-child { color: rgba(255,255,255,0.8); font-weight: 700; font-size: 14px; }
+.inv-total-grand span:last-child  { color: var(--accent); font-weight: 900; font-size: 15px; }
+
+/* Signature */
+.inv-signature-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 1px solid var(--border);
+  padding-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.inv-declaration { font-size: 11px; color: var(--text-hint); max-width: 360px; line-height: 1.5; }
+
+.inv-sign-box { text-align: right; }
+.inv-sign-company { font-size: 13px; font-weight: 700; color: var(--primary); margin-bottom: 36px; }
+.inv-sign-line    { height: 1px; background: var(--text-main); width: 180px; margin-left: auto; }
+.inv-sign-label   { font-size: 11px; color: var(--text-muted); margin-top: 6px; }
+
+.inv-footer-note {
+  text-align: center;
+  font-size: 10.5px;
+  color: var(--text-hint);
+  border-top: 1px dashed var(--border);
+  padding-top: 10px;
+}
+
+@media (max-width: 640px) {
+  .invoice-paper { padding: 1rem; }
+  .inv-header     { flex-direction: column; }
+  .inv-title-block { text-align: left; }
+  .inv-parties    { grid-template-columns: 1fr; }
+  .inv-footer-grid{ grid-template-columns: 1fr; }
+  .inv-totals     { min-width: 0; width: 100%; }
+}
